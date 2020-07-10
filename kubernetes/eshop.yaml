@@ -1,0 +1,62 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: eshop
+    dce.daocloud.io/app: eshop
+  name: eshop
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: eshop
+  template:
+    metadata:
+      labels:
+        app: eshop
+        dce.daocloud.io/app: eshop
+      name: eshop
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: kubernetes.io/os
+                operator: In
+                values:
+                - windows
+      containers:
+      - image: 10.7.106.172/kube-system/eshop:4.7.2-windowsservercore-ltsc2019-1.0.5
+        imagePullPolicy: IfNotPresent
+        name: eshop
+        ports:
+        - containerPort: 80
+          protocol: TCP
+        resources:
+          limits:
+            cpu: "1"
+            memory: "1009715200"
+          requests:
+            cpu: "1"
+            memory: "1009715200"
+      restartPolicy: Always
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    dce.daocloud.io/app: eshop
+  name: eshop
+spec:
+  ports:
+  - nodePort: 38133
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: eshop
+  type: NodePort

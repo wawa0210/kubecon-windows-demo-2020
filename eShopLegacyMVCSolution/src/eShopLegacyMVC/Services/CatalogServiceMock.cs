@@ -15,7 +15,7 @@ namespace eShopLegacyMVC.Services
 
         public CatalogServiceMock()
         {
-            //catalogItems = new List<CatalogItem>(PreconfiguredData.GetPreconfiguredCatalogItems());
+            catalogItems = new List<CatalogItem>(PreconfiguredData.GetPreconfiguredCatalogItems());
             var task = Task.Run<List<CatalogItem>>(async () => await "http://eshop-api/catalogs".GetJsonAsync<List<CatalogItem>>());
             catalogItems = task.Result;
         }
