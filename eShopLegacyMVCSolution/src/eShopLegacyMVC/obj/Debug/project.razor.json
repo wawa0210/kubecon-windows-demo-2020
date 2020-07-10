@@ -1,0 +1,19 @@
+{
+  "FilePath": "c:\\Users\\wawa0210\\project\\github\\eShopModernizing\\eShopLegacyMVCSolution\\src\\eShopLegacyMVC\\eShopLegacyMVC.csproj",
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  },
+  "ProjectWorkspaceState": {
+    "TagHelpers": [],
+    "CSharpLanguageVersion": 800
+  },
+  "RootNamespace": null,
+  "Documents": [],
+  "SerializationFormat": "0.2"
+}
