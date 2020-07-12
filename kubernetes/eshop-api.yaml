@@ -7,7 +7,7 @@ metadata:
   name: eshop-api
   namespace: default
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: eshop-api
@@ -28,7 +28,7 @@ spec:
                 values:
                 - linux
       containers:
-      - image: 10.7.106.172/kube-system/dotnet-eshop-api:1.0.4
+      - image: 10.7.106.172/kube-system/dotnet-eshop-api:1.0.7
         imagePullPolicy: IfNotPresent
         name: eshop-api
         ports:

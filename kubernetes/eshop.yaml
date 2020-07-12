@@ -7,7 +7,7 @@ metadata:
   name: eshop
   namespace: default
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: eshop
@@ -28,7 +28,7 @@ spec:
                 values:
                 - windows
       containers:
-      - image: 10.7.106.172/kube-system/eshop:4.7.2-windowsservercore-ltsc2019-1.0.5
+      - image: 10.7.106.172/kube-system/eshop:4.7.2-windowsservercore-ltsc2019-1.0.7
         imagePullPolicy: IfNotPresent
         name: eshop
         ports:
