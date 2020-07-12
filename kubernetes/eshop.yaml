@@ -18,15 +18,7 @@ spec:
         dce.daocloud.io/app: eshop
       name: eshop
     spec:
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-            - matchExpressions:
-              - key: kubernetes.io/os
-                operator: In
-                values:
-                - windows
+      runtimeClassName: windows-2019
       containers:
       - image: 10.7.106.172/kube-system/eshop:4.7.2-windowsservercore-ltsc2019-1.0.7
         imagePullPolicy: IfNotPresent
