@@ -20,7 +20,7 @@ spec:
     spec:
       runtimeClassName: windows-2019
       containers:
-      - image: 10.7.106.172/kube-system/eshop:4.7.2-windowsservercore-ltsc2019-1.0.10
+      - image: 10.7.106.172/kube-system/eshop:4.7.2-windowsservercore-ltsc2019-2.1
         imagePullPolicy: IfNotPresent
         name: eshop
         ports:

@@ -28,7 +28,7 @@ spec:
                 values:
                 - linux
       containers:
-      - image: 10.7.106.172/kube-system/dotnet-eshop-api:1.0.10
+      - image: 10.7.106.172/kube-system/dotnet-eshop-api:2.1
         imagePullPolicy: IfNotPresent
         name: eshop-api
         ports:

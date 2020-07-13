@@ -1,4 +1,4 @@
-$eshopVersion="1.0.11"
+$eshopVersion="2.1"
 
 pushd
 
